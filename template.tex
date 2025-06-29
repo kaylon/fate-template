@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{quoting}
+\usepackage[colorlinks=true, linkcolor=darkgray]{hyperref}
+\usepackage{needspace}
+\usepackage{textcase}
+
+% --- Page config ---
+\geometry{a4paper, margin=1.8cm}
+\setlength{\columnsep}{1.5em}
+
+% --- Fonts ---
+\renewcommand{\normalsize}{\fontsize{8.5}{10}\selectfont}
+\normalsize
+\renewcommand{\baselinestretch}{1.2}
+
+\setmainfont{Montserrat-Regular.ttf}[
+    Path = ./fonts/,
+    ItalicFont = Merriweather-Italic.ttf,
+    BoldFont = Montserrat-SemiBold.ttf,
+    BoldItalicFont = Merriweather-BoldItalic.ttf
+]
+
+\newfontfamily\montserratThin{Montserrat-Thin.ttf}[
+    Path = ./fonts/,
+]
+
+\newfontfamily\montserratLight{Montserrat-Light.ttf}[
+    Path = ./fonts/,
+]
+
+\newfontfamily\eveleth{Eveleth-Regular.ttf}[
+    Path = ./fonts/
+]
+
+% --- Colors ---
+\definecolor{maintext}{HTML}{444444}
+% \definecolor{boxgray}{HTML}{F2F2F2}
+% \definecolor{boxborder}{HTML}{727272}
+
+\color{maintext}
+
+% --- Columns ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\newenvironment{twocolumns}
+    {\begin{multicols*}{2}}
+    {\end{multicols*}}
+
+% --- Custom Graybox ---
+\newtcolorbox{graybox}{
+    breakable,
+    colback=gray!10,
+    enhanced,
+    frame hidden,
+    borderline north={1pt}{0pt}{gray!70},
+    borderline south={1pt}{0pt}{gray!70},
+    left=1em,
+    right=1em,
+    top=1em,
+    bottom=1em,
+    before skip=1em,
+    after skip=1em,
+    sharp corners,
+}
+
+% --- Blockquote ---
+\newtcolorbox{quotebox}{
+    breakable,
+    colback=white,
+    enhanced,
+    frame hidden,
+    borderline west={2pt}{0pt}{gray!70},
+    left=1em,
+    right=0em,
+    top=0.2em,
+    bottom=0.2em,
+    before skip=1em,
+    after skip=1em,
+    sharp corners,
+}
+\renewenvironment{quote}
+    {\begin{quotebox}}
+    {\end{quotebox}}
+
+% --- Titles ---
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}
+    {\montserratThin\fontsize{24pt}{28pt}\selectfont\MakeTextUppercase}{\thesection}{1em}{}
+\titleformat{\subsection}
+    {\eveleth\large\MakeTextUppercase}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+    {\montserratLight\large\MakeTextUppercase}{\thesubsubsection}{1em}{}
+
+\newcommand{\hfour}[1]{%
+    \needspace{4\baselineskip}%
+    \vspace*{3pt}%
+    {\fontsize{10pt}{11pt}\selectfont\bfseries
+    \raisebox{-0.1ex}{\textcolor{gray!60}{\rule{1.5ex}{1.5ex}}}\hspace{0.45em}%
+    \MakeTextUppercase{#1}%
+    \par}%
+    \nopagebreak[4]%
+    \vspace{3pt}%
+}
+
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+    \end{multicols*}
+    \vspace{1em}
+    \oldsection{#1}
+    \vspace{1em}
+    \begin{multicols*}{2}
+}
+
+% --- Frontpage ---
+\newcommand{\frontpage}[3]{%
+    \begin{titlepage}
+        \vspace*{\fill}
+        \begin{center}
+            {\eveleth\fontsize{36pt}{36pt}\selectfont\MakeTextUppercase{#1}}\\[1em]
+            {\large\MakeUppercase{#2}}\\[2em]
+            {\normalsize #3}
+        \end{center}
+        \vspace*{\fill}
+        \thispagestyle{empty}
+    \end{titlepage}
+}
+
+% --- Table of contents ---
+\makeatletter
+\renewcommand{\tableofcontents}{%
+    {\montserratThin\fontsize{24pt}{28pt}\selectfont\MakeTextUppercase{\contentsname}}%
+    \@starttoc{toc}%
+}
+\makeatother
+
+
+% --- Pandoc variables ---
+$if(title)$
+    \title{$title$}
+$endif$
+$if(author)$
+    \author{$author$}
+$endif$
+$if(date)$
+    \date{$date$}
+$endif$
+
+% --- Begin document ---
+
+\begin{document}
+
+% Frontpage
+$if(title)$
+    \frontpage{$title$}{$subtitle$}{$author$}
+$endif$
+
+\begin{twocolumns}
+
+% Table of contents
+$if(toc)$
+\clearpage
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+$endif$
+
+% Content
+
+$body$
+\end{twocolumns}
+
+\end{document}
