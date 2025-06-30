@@ -52,5 +52,5 @@ pandoc-latex-environment --help
 
 1. Run the following command to build the .html file
 ```
-pandoc demo.md --template=template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filter-h4.lua -o demo.pdf
+pandoc demo.md --template=template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters.lua -o demo.pdf
 ```

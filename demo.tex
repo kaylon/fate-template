@@ -1,0 +1,304 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{quoting}
+\usepackage[colorlinks=true, linkcolor=darkgray]{hyperref}
+\usepackage{needspace}
+\usepackage{textcase}
+
+% --- Page config ---
+\geometry{a4paper, margin=1.6cm}
+\setlength{\columnsep}{1.5em}
+
+% --- Fonts ---
+\renewcommand{\normalsize}{\fontsize{8.5}{10}\selectfont}
+\normalsize
+\renewcommand{\baselinestretch}{1.2}
+
+\setmainfont{Montserrat-Regular.ttf}[
+    Path = ./fonts/,
+    ItalicFont = Merriweather-Italic.ttf,
+    BoldFont = Montserrat-SemiBold.ttf,
+    BoldItalicFont = Merriweather-BoldItalic.ttf
+]
+
+\newfontfamily\montserratThin{Montserrat-Thin.ttf}[
+    Path = ./fonts/,
+]
+
+\newfontfamily\montserratLight{Montserrat-Light.ttf}[
+    Path = ./fonts/,
+]
+
+\newfontfamily\eveleth{Eveleth-Regular.ttf}[
+    Path = ./fonts/
+]
+
+% --- Colors ---
+\definecolor{maintext}{HTML}{444444}
+% \definecolor{boxgray}{HTML}{F2F2F2}
+% \definecolor{boxborder}{HTML}{727272}
+
+\color{maintext}
+
+% --- Columns ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\newenvironment{twocolumns}
+    {\begin{multicols*}{2}}
+    {\end{multicols*}}
+
+% --- Custom Graybox ---
+\newtcolorbox{graybox}{
+    breakable,
+    colback=gray!10,
+    enhanced,
+    frame hidden,
+    borderline north={1pt}{0pt}{gray!70},
+    borderline south={1pt}{0pt}{gray!70},
+    left=1em,
+    right=1em,
+    top=1em,
+    bottom=1em,
+    before skip=1em,
+    after skip=1em,
+    sharp corners,
+}
+
+% --- Blockquote ---
+\newtcolorbox{quotebox}{
+    breakable,
+    colback=white,
+    enhanced,
+    frame hidden,
+    borderline west={2pt}{0pt}{gray!70},
+    left=1em,
+    right=0em,
+    top=0.2em,
+    bottom=0.2em,
+    before skip=1em,
+    after skip=1em,
+    sharp corners,
+}
+\renewenvironment{quote}
+    {\begin{quotebox}}
+    {\end{quotebox}}
+
+% --- Titles ---
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}
+    {\montserratThin\fontsize{24pt}{28pt}\selectfont\MakeTextUppercase}{\thesection}{1em}{}
+\titleformat{\subsection}
+    {\eveleth\large\MakeTextUppercase}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+    {\montserratLight\large\MakeTextUppercase}{\thesubsubsection}{1em}{}
+
+\newcommand{\hfour}[1]{%
+    \needspace{4\baselineskip}%
+    \vspace*{3pt}%
+    {\fontsize{10pt}{11pt}\selectfont\bfseries
+    \raisebox{-0.1ex}{\textcolor{gray!60}{\rule{1.5ex}{1.5ex}}}\hspace{0.45em}%
+    \MakeTextUppercase{#1}%
+    \par}%
+    \nopagebreak[4]%
+    \vspace{3pt}%
+}
+
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+    \end{multicols*}
+    \vspace{1em}
+    \oldsection{#1}
+    \vspace{1em}
+    \begin{multicols*}{2}
+}
+
+% --- Frontpage ---
+\newcommand{\frontpage}[3]{%
+    \begin{titlepage}
+        \vspace*{\fill}
+        \begin{center}
+            {\eveleth\fontsize{36pt}{36pt}\selectfont\MakeTextUppercase{#1}}\\[1em]
+            {\large\MakeUppercase{#2}}\\[2em]
+            {\normalsize #3}
+        \end{center}
+        \vspace*{\fill}
+        \thispagestyle{empty}
+    \end{titlepage}
+}
+
+% --- Adversaries ---
+\input{adversary}
+
+% --- Table of contents ---
+\makeatletter
+\renewcommand{\tableofcontents}{%
+    {\montserratThin\fontsize{24pt}{28pt}\selectfont\MakeTextUppercase{\contentsname}}%
+    \@starttoc{toc}%
+}
+\makeatother
+
+
+% --- Pandoc variables ---
+    \title{Campaign Demo}
+    \author{Mikel Martín Corrales}
+
+% --- Begin document ---
+
+\begin{document}
+
+% Frontpage
+    \frontpage{Campaign Demo}{A sample campaign for Daggerheart}{Mikel
+Martín Corrales}
+
+\begin{twocolumns}
+
+% Table of contents
+\clearpage
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+% Content
+
+\hypertarget{chapter-1}{%
+\section{Chapter 1}\label{chapter-1}}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua.
+
+\begin{graybox}
+\textbf{This is a box title}
+
+This is a quote from a character in the campaign. \emph{It should be
+visually distinct from the rest of the text}, perhaps with a different
+font or style.
+\end{graybox}
+
+\hypertarget{section-1.1}{%
+\subsection{Section 1.1}\label{section-1.1}}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\begin{graybox}
+This is a grey box using the class.
+\end{graybox}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\begin{graybox}
+\emph{This is a quote from a character in the campaign. It should be
+visually distinct from the rest of the text, perhaps with a different
+font or style}
+\end{graybox}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\hypertarget{section-1.2}{%
+\subsection{Section 1.2}\label{section-1.2}}
+
+Lore ipsum dolor sit amet, \emph{consectetur adipiscing elit}. Sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+\begin{quote}
+\textbf{\emph{Note}}: This is a quote from a character in the campaign.
+\emph{It should be visually distinct from the rest of the text, perhaps
+with a different font or style}.
+\end{quote}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\hypertarget{subsection}{%
+\subsubsection{Subsection}\label{subsection}}
+
+\textbf{\emph{Lore ipsum dolor sit amet}}, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore
+ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet,
+consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+et dolore magna aliqua.
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\hypertarget{item-1}{\hfour{Item 1}\label{item-1}}
+
+\textbf{\emph{Lore ipsum dolor sit amet}}, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore
+ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet,
+consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+et dolore magna aliqua.
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+
+\adversary{Synth, The One Thread}{Tier 3 Solo}{Synth after completing the Ritual giving him the One Name}{restrain then hit}{\textbf{Difficulty:} 18 | \textbf{Thresholds:} 19 / 35 | \textbf{HP:} 10 | \textbf{Stress:} 5
+\par\smallskip
+
+\textsc{ATK:} +5 | \textbf{Tendrils:} Very Close | 2d10+3 (Magical)
+}{\begin{itemize}[leftmargin=0em, itemsep=3pt, parsep=4pt]
+\renewcommand{\labelitemi}{}
+\item \textbf{Shredding Strike - Action:} Make an attack against a target within Very Close range. On a success, deal 2 and the target must mark an Armor Slot without gaining its benefit (they can still use armor to reduce the damage)
+\item \textbf{Woven Barrier - Passive:} When this adversary takes physical damage, reduce it by 3.
+\item \textbf{Thread Entangle - Action:} Mark a stress and shoot out threads against all targets within close range and targets must make an agility roll or be restrained and take 3d10 damage.
+\end{itemize}
+}
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit
+amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur
+adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua.
+\end{twocolumns}
+
+\end{document}

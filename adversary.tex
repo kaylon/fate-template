@@ -1,0 +1,73 @@
+% --- estilos.tex ---
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% Colores
+\definecolor{bordercolor}{HTML}{bcab84}
+\definecolor{bgcolor}{HTML}{f4f0e5}
+\definecolor{highlight}{HTML}{bcab84}
+
+% Caja principal
+\newtcolorbox{adversarybox}[1]{
+    enhanced,
+    colback=gray!10,
+    colframe=gray!70,
+    arc=5pt,
+    boxrule=1pt,
+    outer arc=5pt,
+    after skip=1em,
+    top=8pt,
+    left=8pt,
+    right=8pt,
+    bottom=8pt,
+    before upper={\parskip=4pt},
+}
+
+% Caja interna
+\newtcolorbox{adversaryinnerbox}{
+    colback=white,
+    enhanced,
+    frame hidden,
+    borderline north={1pt}{0pt}{gray!70},
+    borderline south={1pt}{0pt}{gray!70},
+    left=0.5em,
+    right=0.5em,
+    top=0.5em,
+    bottom=0.5em,
+    before skip=1em,
+    after skip=1em,
+    sharp corners,
+}
+
+% Separador
+\newcommand{\myseparator}{\par\noindent\rule{\linewidth}{1pt}\par}
+
+\newcommand{\adversary}[6]{
+    \begin{adversarybox}{}
+        \eveleth\fontsize{12pt}{12pt}\selectfont\MakeTextUppercase #1
+        \par\smallskip
+
+        \normalfont\fontsize{8pt}{8pt}\selectfont
+        \textbf{\emph{#2}}
+        \par\smallskip
+
+        \emph{#3}
+        \par\smallskip
+
+        \textbf{Motives \& Tactics:} #4
+        \par\smallskip
+
+        \begin{adversaryinnerbox}
+            #5
+        \end{adversaryinnerbox}
+
+        \eveleth\fontsize{10pt}{10pt}\selectfont\MakeTextUppercase Features
+        \par\smallskip
+
+        \normalfont\fontsize{8pt}{8pt}\selectfont
+
+        #6
+    \end{adversarybox}
+}
