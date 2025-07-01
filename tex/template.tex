@@ -47,11 +47,16 @@
     \newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fonts/]
 }
 
-
 % --- Colors ---
 \definecolor{maintext}{HTML}{444444}
-% \definecolor{boxgray}{HTML}{F2F2F2}
-% \definecolor{boxborder}{HTML}{727272}
+\definecolor{boxbg}{HTML}{ebf0f1}
+\definecolor{boxborder}{HTML}{2d4d63}
+\definecolor{quoteborder}{HTML}{deb334}
+\definecolor{h4square}{HTML}{deb334}
+\definecolor{h1text}{HTML}{444444}
+\definecolor{h2text}{HTML}{2d4d63}
+\definecolor{h3text}{HTML}{927421}
+\definecolor{h4text}{HTML}{2d4d63}
 
 \color{maintext}
 
@@ -63,14 +68,14 @@
     {\begin{multicols*}{2}}
     {\end{multicols*}}
 
-% --- Custom Graybox ---
-\newtcolorbox{graybox}{
+% --- Custom square box ---
+\newtcolorbox{squarebox}{
     breakable,
-    colback=gray!10,
+    colback=boxbg,
     enhanced,
     frame hidden,
-    borderline north={1pt}{0pt}{gray!70},
-    borderline south={1pt}{0pt}{gray!70},
+    borderline north={1pt}{0pt}{boxborder},
+    borderline south={1pt}{0pt}{boxborder},
     left=1em,
     right=1em,
     top=1em,
@@ -86,7 +91,7 @@
     colback=white,
     enhanced,
     frame hidden,
-    borderline west={2pt}{0pt}{gray!70},
+    borderline west={2pt}{0pt}{quoteborder},
     left=1em,
     right=0em,
     top=0.2em,
@@ -103,18 +108,28 @@
 \setcounter{secnumdepth}{0}
 
 \titleformat{\section}
-    {\montserratThin\fontsize{24pt}{28pt}\selectfont\MakeTextUppercase}{\thesection}{1em}{}
+    {\montserratThin\fontsize{24pt}{28pt}\selectfont\color{h1text}\MakeTextUppercase}
+    {\thesection}
+    {1em}
+    {}
 \titleformat{\subsection}
-    {\eveleth\large\MakeTextUppercase}{\thesubsection}{1em}{}
+    {\eveleth\large\color{h2text}\MakeTextUppercase}
+    {\thesubsection}
+    {1em}
+    {}
 \titleformat{\subsubsection}
-    {\montserratLight\large\MakeTextUppercase}{\thesubsubsection}{1em}{}
+    {\large\color{h3text}\MakeTextUppercase}
+    {\thesubsubsection}
+    {1em}
+    {}
+
 
 \newcommand{\hfour}[1]{%
     \needspace{4\baselineskip}%
     \vspace*{3pt}%
     {\fontsize{10pt}{11pt}\selectfont\bfseries
-    \raisebox{-0.1ex}{\textcolor{gray!60}{\rule{1.5ex}{1.5ex}}}\hspace{0.45em}%
-    \MakeTextUppercase{#1}%
+    \raisebox{-0.1ex}{\textcolor{h4square}{\rule{1.5ex}{1.5ex}}}\hspace{0.45em}%
+    \color{h4text} #1%
     \par}%
     \nopagebreak[4]%
     \vspace{3pt}%

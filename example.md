@@ -5,7 +5,7 @@ author: Best Game Master
 toc: true
 # Mandatory fields. Please do not remove.
 pandoc-latex-environment:
-  graybox: [graybox]
+  squarebox: [squarebox]
 ---
 
 # Chapter 1
@@ -14,7 +14,7 @@ Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor in
 
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-::: graybox
+::: squarebox
 **This is a box title**
 
 This is a quote from a character in the campaign. *It should be visually distinct from the rest of the text*, perhaps with a different font or style.
@@ -24,13 +24,13 @@ This is a quote from a character in the campaign. *It should be visually distinc
 
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-::: graybox
+::: squarebox
 This is a grey box using the class.
 :::
 
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-::: graybox
+::: squarebox
 *This is a quote from a character in the campaign. It should be visually distinct from the rest of the text, perhaps with a different font or style*
 :::
 

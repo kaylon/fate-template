@@ -5,5 +5,5 @@ author: Name of the Author
 toc: false
 # Mandatory fields. Please do not remove.
 pandoc-latex-environment:
-  graybox: [graybox]
+  squarebox: [squarebox]
 ---

@@ -74,10 +74,10 @@ pandoc-latex-environment:
 
 ## Custom Blocks
 
-- Use the `graybox` class to create visually distinct boxes in your text:
+- Use the `squarebox` class to create visually distinct boxes in your text:
 
 ```markdown
-::: graybox
+::: squarebox
 **This is a box title**
 This is a quote from a character in the campaign. *It should be visually distinct from the rest of the text*, perhaps with a different font or style.
 :::

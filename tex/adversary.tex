@@ -1,23 +1,23 @@
-% --- estilos.tex ---
+% --- Packages ---
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 
-% Colores
+% --- Colors ---
 \definecolor{bordercolor}{HTML}{bcab84}
 \definecolor{bgcolor}{HTML}{f4f0e5}
-\definecolor{highlight}{HTML}{bcab84}
 
-% Caja principal
+% --- Main Box ---
 \newtcolorbox{adversarybox}[1]{
     enhanced,
-    colback=gray!10,
-    colframe=gray!70,
+    colback=bgcolor,
+    colframe=bordercolor,
     arc=5pt,
     boxrule=1pt,
     outer arc=5pt,
-    after skip=1em,
+    before skip=2em,
+    after skip=2em,
     top=8pt,
     left=8pt,
     right=8pt,
@@ -25,13 +25,13 @@
     before upper={\parskip=4pt},
 }
 
-% Caja interna
+% --- Inner box ---
 \newtcolorbox{adversaryinnerbox}{
     colback=white,
     enhanced,
     frame hidden,
-    borderline north={1pt}{0pt}{gray!70},
-    borderline south={1pt}{0pt}{gray!70},
+    borderline north={1pt}{0pt}{bordercolor},
+    borderline south={1pt}{0pt}{bordercolor},
     left=0.5em,
     right=0.5em,
     top=0.5em,
@@ -41,28 +41,31 @@
     sharp corners,
 }
 
-% Separador
+% --- Separator ---
 \newcommand{\myseparator}{\par\noindent\rule{\linewidth}{1pt}\par}
 
-\newcommand{\adversary}[6]{
-    \begin{adversarybox}{}
-        \eveleth\fontsize{12pt}{12pt}\selectfont\MakeTextUppercase{#1}
-        \par\smallskip
+\newcommand{\adversary}[6]{%
+    \begin{adversarybox}{}%
+        {\color{maintext}%
+            \eveleth\fontsize{12pt}{12pt}\selectfont\MakeTextUppercase{#1}
+            \par\smallskip
 
-        \normalfont\fontsize{8pt}{8pt}\selectfont
-        \textbf{\emph{#2}}
-        \par\smallskip
+            \normalfont\fontsize{8pt}{8pt}\selectfont
+            \textbf{\emph{#2}}
+            \par\smallskip
 
-        \emph{#3}
-        \par\smallskip
+            \emph{#3}
+            \par\smallskip
 
-        \textbf{Motives \& Tactics:} #4
-        \par\smallskip
+            \textbf{Motives \& Tactics:} #4
+            \par\smallskip
 
-        \begin{adversaryinnerbox}
-            #5
-        \end{adversaryinnerbox}
+            \begin{adversaryinnerbox}
+                #5
+            \end{adversaryinnerbox}
+            \par\smallskip
 
-        #6
-    \end{adversarybox}
+            #6
+        }% <-- Cierra el grupo de color
+    \end{adversarybox}%
 }
