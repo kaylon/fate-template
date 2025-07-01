@@ -115,7 +115,7 @@ function Div(el)
         if data.features then
             if type(data.features) == "table" then
                 if #data.features > 0 then
-                    features_latex = "\\eveleth\\fontsize{10pt}{10pt}\\selectfont\\MakeTextUppercase Features\n"
+                    features_latex = "\\eveleth\\fontsize{10pt}{10pt}\\selectfont\\MakeTextUppercase{Features}\n"
                     features_latex = features_latex .. "\\par\\smallskip\n"
                     features_latex = features_latex .. "\\normalfont\\fontsize{8pt}{8pt}\\selectfont\n"
                     features_latex = features_latex .. "\\begin{itemize}[leftmargin=0em, itemsep=3pt, parsep=4pt]\n"

@@ -14,6 +14,7 @@
 \usepackage[colorlinks=true, linkcolor=darkgray]{hyperref}
 \usepackage{needspace}
 \usepackage{textcase}
+\usepackage{longtable}
 
 % --- Page config ---
 \geometry{a4paper, margin=1.6cm}
@@ -39,9 +40,13 @@
     Path = ./fonts/,
 ]
 
-\newfontfamily\eveleth{Eveleth-Regular.ttf}[
-    Path = ./fonts/
-]
+% Try to load Eveleth-Regular.ttf, if fails load League-Spartan.ttf
+\IfFontExistsTF{./fonts/Eveleth-Regular.ttf}{
+    \newfontfamily\eveleth{Eveleth-Regular.ttf}[Path=./fonts/]
+}{
+    \newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fonts/]
+}
+
 
 % --- Colors ---
 \definecolor{maintext}{HTML}{444444}
@@ -122,6 +127,11 @@
     \oldsection{#1}
     \vspace{1em}
     \begin{multicols*}{2}
+}
+
+% --- Lists ---
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}%
 }
 
 % --- Frontpage ---

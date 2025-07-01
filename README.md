@@ -149,3 +149,10 @@ Keeps your project organized for easy editing, versioning, and sharing.
 This project is licensed under the **GNU General Public License, version 3** (or any later version).
 
 For more details, see the [full license text](https://www.gnu.org/licenses/gpl-3.0.html).
+
+This template uses:
+- Montserrat font (Google Fonts, SIL Open Font License)
+- Merriweather font (Google Fonts, SIL Open Font License)
+- Eveleth Clean Regular (commercial font, not included—users must provide their own licensed copy).
+  - Add `Eveleth-Regular.ttf` to the `fonts/` directory.
+  - If not available, the template will use LeagueSpartan font (Google Fonts, SIL Open Font License) as a fallback.
