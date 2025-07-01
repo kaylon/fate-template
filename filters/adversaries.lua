@@ -1,13 +1,3 @@
--- H4 headers filter.
-function Header(elem)
-    if elem.level == 4 then
-        local content = pandoc.utils.stringify(elem.content)
-        content = content:gsub("([{}])", "\\%1")
-        return pandoc.RawBlock('latex',
-        '\\hypertarget{' .. elem.identifier .. '}{\\hfour{' .. content .. '}\\label{' .. elem.identifier .. '}}')
-    end
-end
-
 -- Function to clean text for LaTeX
 local function clean_latex(s)
     if not s then return "" end
@@ -78,7 +68,7 @@ local function process_namevalue(process_namevalue)
     end
 end
 
--- Adversaries filter (robust version)
+-- Adversaries filter
 function Div(el)
     if el.classes:includes('adversary') then
         -- Extract the content as YAML text with newlines
@@ -125,7 +115,10 @@ function Div(el)
         if data.features then
             if type(data.features) == "table" then
                 if #data.features > 0 then
-                    features_latex = "\\begin{itemize}[leftmargin=0em, itemsep=3pt, parsep=4pt]\n"
+                    features_latex = "\\eveleth\\fontsize{10pt}{10pt}\\selectfont\\MakeTextUppercase Features\n"
+                    features_latex = features_latex .. "\\par\\smallskip\n"
+                    features_latex = features_latex .. "\\normalfont\\fontsize{8pt}{8pt}\\selectfont\n"
+                    features_latex = features_latex .. "\\begin{itemize}[leftmargin=0em, itemsep=3pt, parsep=4pt]\n"
                     features_latex = features_latex .. "\\renewcommand{\\labelitemi}{}\n"
                     for _, f in ipairs(data.features) do
                         features_latex = features_latex .. "\\item " .. process_namevalue(f) .. "\n"
@@ -159,4 +152,3 @@ function Div(el)
         return pandoc.RawBlock("latex", latex)
     end
 end
-

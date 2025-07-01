@@ -1,56 +1,151 @@
-# Requirements
+# Daggerheart Campaign PDF Generator
 
-## 1. Install Pandoc
-### Windows
-#### Opción 1: Download the installer from the officual Pandoc website.
+This project provides a modern workflow to create beautiful, two-column PDF documents for tabletop RPG campaigns (like Daggerheart) using Markdown. It uses a custom LaTeX template, Pandoc Lua filters, and an organized folder structure to make the process easy—even for users with no LaTeX experience.
 
-#### Opción 2: Use Chocolatey:
+## Features
+- Write your campaign in Markdown: Easy, readable, and portable.
+- Automatic conversion to PDF: Produces a professionally styled, two-column PDF.
+- Custom adversary blocks: Add adversaries using simple Markdown/YAML blocks.
+- Image support: Effortlessly include images—single column, double column, or full page.
+- Cross-platform scripts: Run on Windows, Linux, or Mac with a single command.
 
-```
-choco install pandoc
-```
-
-#### Opción 3: Use Winget:
-
-```
-winget install --source winget --exact --id JohnMacFarlane.Pandoc
-```
-Verify: Open a terminal (cmd or PowerShell) and run
+## Folder Structure
 
 ```
-pandoc --`version
-```
-Is you see the version, Pandoc is correctly installed.
-
-### Linux (Ubuntu/Debian)
-Terminal:
-
-```
-sudo apt update
-sudo apt install pandoc
-```
-Verify: Open a terminal and run
-```
-pandoc --version
-```
-Is you see the version, Pandoc is correctly installed.
-
-## 2. Install pandoc-latex-environment filter
-You need pipx installed from https://pipx.pypa.io/stable/.
-
-Install the filter:
-```
-pipx install pandoc-latex-environment
+├── fonts/                           # Custom fonts for use in documents
+│   ├── Montserrat-Regular.ttf
+│   ├── Montserrat-Light.ttf
+│   └── ...                          # Other custom fonts
+├── tex/                             # LaTeX templates and auxiliary files
+│   ├── adversary.tex                # Definition of the adversary box/command
+│   ├── template.tex                 # Common configuration (packages, styles, etc.)
+│   └── ...                          # Additional LaTeX files
+├── filters/                         # Lua filters for Pandoc
+│   ├── filters.lua                  # Main or utility filter
+│   ├── adversaries.lua              # Filter for adversary box generation
+│   └── h4.lua                       # Filter for custom heading styles
+├── output/                          # Generated files (PDFs, etc.)
+│   └── main.pdf
+├── images/                          # Image files for use in documents
+│   └── ...                          # All project images
+├── main.md                          # Main Markdown document (content)
+├── example.md                       # Example Markdown document
+├── generatepdf.bat                  # Windows script to generate PDF
+└── generatepdf.sh                   # Linux/macOS script to generate PDF
 ```
 
-Verify: Open a terminal and run
-```
-pandoc-latex-environment --help
+## Setup
+
+###1. Install [Pandoc](https://pandoc.org/installing.html) (Make sure Pandoc is available in your system’s PATH.)
+2. Install LaTeX
+    - **Linux**: Install TeX Live or another LaTeX distribution.
+      ```
+      sudo apt install texlive-xetex
+      ```
+    - **Mac**: Install MacTeX from [tug.org](https://www.tug.org/mactex/).
+    - **Windows**: Install MiKTeX from [miktex.org](https://miktex.org/download).
+3. Install pandoc-latex-environment filter
+   1. Install [pipx](https://pipx.pypa.io/en/stable/installation/) if you haven't already.
+   2. Run the following command to install the filter:
+   ```
+   pipx install pandoc-latex-environment
+   ```
+4. Clone this repository or download the files to your local machine.
+
+## Writing Your Campaign
+
+Write your content in main.md using standard Markdown.
+
+Use the following YAML at the top of main.md to set the title, subtitle, and author:
+  - Set `toc: true` to enable a table of contents.
+  - Do not remove the mandatory fields for the LaTeX environment.
+
+```yaml
+---
+title: Title of the Campaign
+subtitle: Subtitle of the Campaign
+author: Name of the Author
+toc: false
+# Mandatory fields. Please do not remove.
+pandoc-latex-environment:
+  graybox: [graybox]
+---
 ```
 
-# Usage
+## Custom Blocks
+
+- Use the `graybox` class to create visually distinct boxes in your text:
+
+```markdown
+::: graybox
+**This is a box title**
+This is a quote from a character in the campaign. *It should be visually distinct from the rest of the text*, perhaps with a different font or style.
+:::
+```
+
+- For quotes, you can use the `>` syntax to create a blockquote:
+
+```markdown
+> ***Note***: This is a quote from a character in the campaign. *It should be visually distinct from the rest of the text, perhaps with a different font or style*.
+```
+
+## Adversaries
+
+- For adversaries, use the `adversary` class:
+  - The `name`, `type`, `description`, `tactics`, `difficulty`, `thresholds`, `hp`, `atk` and `weapons` fields are mandatory.
+  - `experience` and `features` fields are optional.
+
+```markdown
+::: adversary
+name: Vampire, The Bloodthirsty
+type: Tier 2 Solo
+description: A fearsome vampire that preys on the weak.
+tactics: Attack from shadows, drain blood
+difficulty: 15
+thresholds: 16 / 30
+hp: 8
+atk: +4
+weapons:
+  - Fangs: Close | 2d8+2 (Magical)
+experience: Bloodthirsty Knowledge +3
+features:
+  - Blood Drain - Action: Make an attack against a target within Close range. On a success, deal 2 and the target must mark an Armor Slot without gaining its benefit (they can still use armor to reduce the damage)
+  - Shadow Step - Action: Move to a location within Close range, ignoring terrain.
+:::
+```
+
+## Generating the PDF
+
+### Option 1: Run the script (recommended)
+- Windows: Double-click generatepdf.bat or run it from the command prompt.
+- Linux/Mac: Open a terminal, navigate to the project folder, and run:
+    ```bash
+    ./generatepdf.sh
+    ```
+The script will:
+- Check if Pandoc is installed.
+- Convert input/document.md to output/document.pdf using your template and filters.
+
+### Option 2: Run Pandoc manually
+From the project root, run:
 
 1. Run the following command to build the .html file
 ```
-pandoc demo.md --template=template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters.lua -o demo.pdf
+pandoc example.md --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/demo.pdf
 ```
+
+## Helpful Tips
+- Images: Place all images in input/images/ and reference them as images/filename.ext in your Markdown.
+- Adversaries and custom blocks: Use the provided YAML/Markdown syntax for easy entry and automatic styling.
+- Troubleshooting: If you get errors, ensure Pandoc and LaTeX are correctly installed and that your image paths are correct.
+
+## What Does This Project Actually Do?
+Transforms your Markdown campaign into a styled, printable PDF with two columns, custom adversary boxes, and flexible image placement.
+Automates complex LaTeX formatting so you can focus on writing, not typesetting.
+Keeps your project organized for easy editing, versioning, and sharing.
+
+## License
+
+This project is licensed under the **GNU General Public License, version 3** (or any later version).
+
+For more details, see the [full license text](https://www.gnu.org/licenses/gpl-3.0.html).

@@ -1,8 +1,9 @@
 ---
 title: Campaign Demo
 subtitle: A sample campaign for Daggerheart
-author: Mikel Martín Corrales
+author: Best Game Master
 toc: true
+# Mandatory fields. Please do not remove.
 pandoc-latex-environment:
   graybox: [graybox]
 ---
@@ -56,22 +57,20 @@ Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor in
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ::: adversary
-name: Synth, The One Thread
-type: Tier 3 Solo
-description: Synth after completing the Ritual giving him the One Name
-tactics: restrain then hit
-difficulty: 18
-thresholds: 19 / 35
-hp: 10
-stress: 5
-atk: +5
+name: Vampire, The Bloodthirsty
+type: Tier 2 Solo
+description: A fearsome vampire that preys on the weak.
+tactics: Attack from shadows, drain blood
+difficulty: 15
+thresholds: 16 / 30
+hp: 8
+atk: +4
 weapons:
-  - Tendrils: Very Close | 2d10+3 (Magical)
-<!-- experience: Threadname Knowledge +4 -->
+  - Fangs: Close | 2d8+2 (Magical)
+experience: Bloodthirsty Knowledge +3
 features:
-  - Shredding Strike - Action: Make an attack against a target within Very Close range. On a success, deal 2 and the target must mark an Armor Slot without gaining its benefit (they can still use armor to reduce the damage)
-  - Woven Barrier - Passive: When this adversary takes physical damage, reduce it by 3.
-  - Thread Entangle - Action: Mark a stress and shoot out threads against all targets within close range and targets must make an agility roll or be restrained and take 3d10 damage.
+  - Blood Drain - Action: Make an attack against a target within Close range. On a success, deal 2 and the target must mark an Armor Slot without gaining its benefit (they can still use armor to reduce the damage)
+  - Shadow Step - Action: Move to a location within Close range, ignoring terrain.
 :::
 
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
