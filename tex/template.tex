@@ -2,7 +2,8 @@
 
 % --- Packages ---
 \usepackage{fontspec}
-\usepackage{xcolor}
+\usepackage{framed}
+\usepackage[table]{xcolor}
 \usepackage{geometry}
 \usepackage{multicol}
 \usepackage[most]{tcolorbox}
@@ -14,7 +15,6 @@
 \usepackage[colorlinks=true, linkcolor=darkgray]{hyperref}
 \usepackage{needspace}
 \usepackage{textcase}
-\usepackage{longtable}
 
 % --- Page config ---
 \geometry{a4paper, margin=1.6cm}
@@ -54,9 +54,12 @@
 \definecolor{quoteborder}{HTML}{deb334}
 \definecolor{h4square}{HTML}{deb334}
 \definecolor{h1text}{HTML}{444444}
-\definecolor{h2text}{HTML}{2d4d63}
+\definecolor{h2text}{HTML}{3a6b7b}
 \definecolor{h3text}{HTML}{927421}
-\definecolor{h4text}{HTML}{2d4d63}
+\definecolor{h4text}{HTML}{3a6b7b}
+\definecolor{tableheaderbg}{HTML}{3a6b7b}
+\definecolor{tablerow}{HTML}{ebf0f1}
+\definecolor{white}{HTML}{ffffff}
 
 \color{maintext}
 
@@ -71,15 +74,15 @@
 % --- Custom square box ---
 \newtcolorbox{squarebox}{
     breakable,
-    colback=boxbg,
+    colback=gray!7,
     enhanced,
     frame hidden,
-    borderline north={1pt}{0pt}{boxborder},
-    borderline south={1pt}{0pt}{boxborder},
-    left=1em,
-    right=1em,
-    top=1em,
-    bottom=1em,
+    borderline north={.75pt}{0pt}{boxborder},
+    borderline south={.75pt}{0pt}{boxborder},
+    left=.75em,
+    right=.75em,
+    top=.75em,
+    bottom=.75em,
     before skip=1em,
     after skip=1em,
     sharp corners,
@@ -148,6 +151,10 @@
 \providecommand{\tightlist}{%
     \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}%
 }
+
+% --- Shaded environment ---
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{shaded}}{\end{shaded}}
 
 % --- Frontpage ---
 \newcommand{\frontpage}[3]{%

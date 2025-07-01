@@ -74,3 +74,33 @@ features:
 :::
 
 Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Section 1.3
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+- This is a list item.
+- This is another list item.
+  - This is a nested list item.
+    - This is a nested list item within another nested list item.
+- This is a third list item.
+
+---
+
+Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+1. This is a numbered list item.
+2. This is another numbered list item.
+   1. This is a nested numbered list item.
+   2. This is another nested numbered list item.
+3. This is a third numbered list item.
+4. This is a fourth numbered list item.
+
+This is the *[Markdown Guide](https://www.markdownguide.org)*.
+
+| Header 1 | Header 2 | Header 3 | Header 4 | Header 5 |
+|----------|----------|----------|----------|----------|
+| Item 1   | Item 2   | Item 3   | Item 4   | Item 5   |
+| Item 4   | Item 5   | Item 6   | Item 7   | Item 8   |
+| Item 7   | Item 8   | Item 9   | Item 10  | Item 11  |
+

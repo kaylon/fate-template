@@ -131,7 +131,7 @@ From the project root, run:
 
 1. Run the following command to build the .html file
 ```
-pandoc example.md --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/demo.pdf
+pandoc example.md --no-highlight --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/demo.pdf
 ```
 
 ## Helpful Tips

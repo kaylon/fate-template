@@ -7,7 +7,7 @@ if ! command -v pandoc >/dev/null 2>&1; then
     exit 1
 fi
 
-pandoc main.md --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/main.pdf
+pandoc main.md --no-highlight --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/main.pdf
 
 if [ $? -ne 0 ]; then
     echo [ERROR] There was a problem generating the PDF.

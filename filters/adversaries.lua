@@ -69,11 +69,11 @@ local function process_namevalue(process_namevalue)
 end
 
 -- Adversaries filter
-function Div(el)
-    if el.classes:includes('adversary') then
+function Div(elem)
+    if elem.classes:includes('adversary') then
         -- Extract the content as YAML text with newlines
         local yaml_text = ""
-        for _, block in ipairs(el.content) do
+        for _, block in ipairs(elem.content) do
             if block.t == "Para" then
                 yaml_text = yaml_text .. para_to_yaml(block) .. "\n"
             elseif block.t == "Plain" then

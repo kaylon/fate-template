@@ -9,7 +9,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
-pandoc main.md --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/main.pdf
+pandoc main.md --no-highlight --template=tex/template.tex --pdf-engine=xelatex --filter pandoc-latex-environment --lua-filter=filters/filters.lua -o output/main.pdf
 
 if errorlevel 1 (
     echo [ERROR] There was a problem generating the PDF.
