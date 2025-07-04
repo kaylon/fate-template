@@ -1,4 +1,5 @@
 /fonts/Eveleth-Regular.ttf
+/output/example.tex
 *.aux
 *.log
 *.out
