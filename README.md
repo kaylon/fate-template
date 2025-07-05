@@ -150,6 +150,25 @@ features:
 :::
 ```
 
+## Environments
+- For environments, use the `environment` class:
+  - The `name`, `type`, `description`, `impulses`, `dificulty` and `adversaries` fields are mandatory.
+  - The `features` field is optional.
+
+```markdown
+::: environment
+name: The Dark Forest
+type: Tier 1
+description: A dense forest filled with shadows and danger.
+impulses: Explore, Survive, Escape
+difficulty: 10
+adversaries: Goblin Scout, Shadow Beast
+features:
+  - Dense Trees: Provides cover and concealment.
+  - Hidden Paths: Allows for stealthy movement.
+:::
+```
+
 ## Generating the PDF
 
 ### Option 1: Run the script (recommended)
@@ -187,6 +206,8 @@ Keeps your project organized for easy editing, versioning, and sharing.
 This project is licensed under the **GNU General Public License, version 3** (or any later version).
 
 For more details, see the [full license text](https://www.gnu.org/licenses/gpl-3.0.html).
+
+ This project is not associated with or endorsed by the creators of Critical Role, Darrington Press or any other commercial entity. It is an independent project created for educational and personal use.
 
 ### This template uses:
 - Montserrat font (Google Fonts, SIL Open Font License)

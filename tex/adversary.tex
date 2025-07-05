@@ -4,15 +4,11 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 
-% --- Colors ---
-\definecolor{bordercolor}{HTML}{bcab84}
-\definecolor{bgcolor}{HTML}{f4f0e5}
-
 % --- Main Box ---
 \newtcolorbox{adversarybox}[1]{
     enhanced,
-    colback=bgcolor,
-    colframe=bordercolor,
+    colback=adversarybgcolor,
+    colframe=adversarybordercolor,
     arc=5pt,
     boxrule=1pt,
     outer arc=5pt,
@@ -30,8 +26,8 @@
     colback=white,
     enhanced,
     frame hidden,
-    borderline north={1pt}{0pt}{bordercolor},
-    borderline south={1pt}{0pt}{bordercolor},
+    borderline north={1pt}{0pt}{adversarybordercolor},
+    borderline south={1pt}{0pt}{adversarybordercolor},
     left=0.5em,
     right=0.5em,
     top=0.5em,

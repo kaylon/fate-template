@@ -19,8 +19,6 @@
 \usepackage{tabularx}
 \usepackage{array}
 
-
-
 % --- Page config ---
 \geometry{a4paper, margin=1.6cm}
 \setlength{\columnsep}{1.5em}
@@ -55,18 +53,22 @@
 
 % --- Colors ---
 \definecolor{maintext}{HTML}{444444}
-\definecolor{boxbg}{HTML}{ebf0f1}
-\definecolor{roundedbg}{HTML}{e1eaed}
-\definecolor{boxborder}{HTML}{2d4d63}
-\definecolor{quoteborder}{HTML}{deb334}
-\definecolor{h4square}{HTML}{deb334}
 \definecolor{h1text}{HTML}{444444}
 \definecolor{h2text}{HTML}{3a6b7b}
 \definecolor{h3text}{HTML}{927421}
 \definecolor{h4text}{HTML}{3a6b7b}
+\definecolor{h4square}{HTML}{deb334}
 \definecolor{tableheaderbg}{HTML}{3a6b7b}
 \definecolor{tablerow}{HTML}{ebf0f1}
 \definecolor{white}{HTML}{ffffff}
+\definecolor{squareboxbg}{HTML}{f1ebf4}
+\definecolor{squareboxborder}{HTML}{4d2d63}
+\definecolor{roundedboxbg}{HTML}{dde2ed}
+\definecolor{quoteborder}{HTML}{deb334}
+\definecolor{adversarybordercolor}{HTML}{bcab84}
+\definecolor{adversarybgcolor}{HTML}{f4f0e5}
+\definecolor{environmentbordercolor}{HTML}{a3a3a3}
+\definecolor{environmentbgcolor}{HTML}{ededed}
 
 \color{maintext}
 
@@ -86,11 +88,11 @@
 
 % --- Custom square box ---
 \newtcolorbox{squarebox}{
-    colback=gray!7,
+    colback=squareboxbg,
     enhanced,
     frame hidden,
-    borderline north={.75pt}{0pt}{boxborder},
-    borderline south={.75pt}{0pt}{boxborder},
+    borderline north={.75pt}{0pt}{squareboxborder},
+    borderline south={.75pt}{0pt}{squareboxborder},
     left=.75em,
     right=.75em,
     top=.75em,
@@ -102,7 +104,7 @@
 
 % --- Custom rounded box ---
 \newtcolorbox{roundedbox}{
-    colback=roundedbg,
+    colback=gray!7,
     enhanced,
     frame hidden,         % Alternativamente, puedes usar boxrule=0pt
     arc=6pt,              % Controla el radio de las esquinas redondeadas
@@ -150,7 +152,6 @@
     {\thesubsubsection}
     {1em}
     {}
-
 
 \newcommand{\hfour}[1]{%
     \needspace{4\baselineskip}%
@@ -201,6 +202,9 @@
 % --- Adversaries ---
 \input{tex/adversary}
 
+% --- Environments ---
+\input{tex/environment}
+
 % --- Table of contents ---
 \makeatletter
 \renewcommand{\tableofcontents}{%
@@ -208,7 +212,6 @@
     \@starttoc{toc}%
 }
 \makeatother
-
 
 % --- Pandoc variables ---
 $if(title)$
@@ -241,7 +244,6 @@ $if(toc)$
 $endif$
 
 % Content
-
 $body$
 \end{twocolumns}
 
