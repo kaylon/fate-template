@@ -1,4 +1,4 @@
-require("filters/h4")
-require("filters/adversaries")
+require("filters/headers")
+require("filters/divs")
 require("filters/tables")
 require("filters/images")
