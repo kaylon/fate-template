@@ -5,8 +5,9 @@ This project provides a modern workflow to create beautiful, two-column PDF docu
 ## Features
 - Write your campaign in Markdown: Easy, readable, and portable.
 - Automatic conversion to PDF: Produces a professionally styled, two-column PDF.
-- Custom adversary blocks: Add adversaries using simple Markdown/YAML blocks.
-- Image support: Effortlessly include images—single column, double column, or full page.
+- Custom quotes and boxes: Use simple Markdown syntax to create visually distinct sections.
+- Custom adversary and environment blocks: Add adversaries and environment using simple Markdown/YAML blocks.
+- Image support: Effortlessly include images—single column.
 - Cross-platform scripts: Run on Windows, Linux, or Mac with a single command.
 
 ## Folder Structure
@@ -18,14 +19,17 @@ This project provides a modern workflow to create beautiful, two-column PDF docu
 │   └── ...                          # Other custom fonts
 ├── tex/                             # LaTeX templates and auxiliary files
 │   ├── adversary.tex                # Definition of the adversary box/command
-│   ├── template.tex                 # Common configuration (packages, styles, etc.)
-│   └── ...                          # Additional LaTeX files
+│   ├── environment.tex              # Definition of the environment box/command
+│   └── template.tex                 # Common configuration (packages, styles, etc.)
 ├── filters/                         # Lua filters for Pandoc
 │   ├── filters.lua                  # Main or utility filter
-│   ├── adversaries.lua              # Filter for adversary box generation
-│   └── h4.lua                       # Filter for custom heading styles
+│   ├── divs.lua                     # Filter for adversary and environment generation
+│   ├── headers.lua                  # Filter for headers generation
+│   ├── images.lua                   # Filter for adversary box generation
+│   └── tables.lua                   # Filter for custom tables styles
 ├── output/                          # Generated files (PDFs, etc.)
-│   └── main.pdf
+│   ├── main.pdf                     # Generated PDF output
+│   └── example.pdf                  # Example PDF output
 ├── images/                          # Image files for use in documents
 │   └── ...                          # All project images
 ├── main.md                          # Main Markdown document (content)
@@ -54,7 +58,7 @@ This project provides a modern workflow to create beautiful, two-column PDF docu
 
 ## Writing Your Campaign
 
-Write your content in main.md using standard Markdown.
+Write your content in `main.md` using standard Markdown.
 
 Use the following YAML at the top of main.md to set the title, subtitle, and author:
   - Set `toc: true` to enable a table of contents.
@@ -127,9 +131,9 @@ This is a quote from a character in the campaign. *It should be visually distinc
 
 ## Adversaries
 
-- For adversaries, use the `adversary` class:
+- To display a nice styled adversary box, use the `adversary` class:
   - The `name`, `type`, `description`, `tactics`, `difficulty`, `thresholds`, `hp`, `atk` and `weapons` fields are mandatory.
-  - `experience` and `features` fields are optional.
+  - The `experience` and `features` fields are optional.
 
 ```markdown
 ::: adversary
@@ -140,6 +144,7 @@ tactics: Attack from shadows, drain blood
 difficulty: 15
 thresholds: 16 / 30
 hp: 8
+srtess: 4
 atk: +4
 weapons:
   - Fangs: Close | 2d8+2 (Magical)
@@ -151,7 +156,7 @@ features:
 ```
 
 ## Environments
-- For environments, use the `environment` class:
+- To display a nice styled environment box, use the `environment` class:
   - The `name`, `type`, `description`, `impulses`, `dificulty` and `adversaries` fields are mandatory.
   - The `features` field is optional.
 
@@ -194,20 +199,15 @@ pandoc main.md --no-highlight --template=tex/template.tex --pdf-engine=xelatex -
 - Adversaries and custom blocks: Use the provided YAML/Markdown syntax for easy entry and automatic styling.
 - Troubleshooting: If you get errors, ensure Pandoc and LaTeX are correctly installed and that your image paths are correct.
 - Sometimes special characters in tables (like `#`, `&`, etc.) can cause issues. If you encounter problems, try escaping them with double backslash (`\\#`).
-- Use the example.md file as a reference for formatting and structure.
-
-## What Does This Project Actually Do?
-Transforms your Markdown campaign into a styled, printable PDF with two columns, custom adversary boxes, and flexible image placement.
-Automates complex LaTeX formatting so you can focus on writing, not typesetting.
-Keeps your project organized for easy editing, versioning, and sharing.
+- Use the example.md file as a reference for formatting and structure. This file is an AI generated module, so it is not accurate or complete, but it serves as a good example.
+- If you need to customize the colours or styles, you can modify the `template.tex` file in the `tex/` directory. Look for the `% --- Colors ---` block to change colors, or adjust any settings as needed.
 
 ## License
 
 This project is licensed under the **GNU General Public License, version 3** (or any later version).
-
 For more details, see the [full license text](https://www.gnu.org/licenses/gpl-3.0.html).
 
- This project is not associated with or endorsed by the creators of Critical Role, Darrington Press or any other commercial entity. It is an independent project created for educational and personal use.
+This project is not associated with or endorsed by the creators of Critical Role, Darrington Press or any other commercial entity. It is an independent project created for educational and personal use.
 
 ### This template uses:
 - Montserrat font (Google Fonts, SIL Open Font License)

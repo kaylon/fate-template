@@ -1,3 +1,4 @@
+-- Tables filter to avoid multicolumn errors.
 function Table(elem)
     local simple = pandoc.utils.to_simple_table(elem)
     local header = simple.header
@@ -5,14 +6,13 @@ function Table(elem)
     local cols = #header > 0 and #header or (#rows[1] or 0)
     if cols == 0 then return elem end
 
-    -- Define tipos de columnas con anchos ajustados para salto de línea
     local col_types = {}
     for i, h in ipairs(header) do
         local colname = pandoc.utils.stringify(h)
         if colname == "Description" then
-            table.insert(col_types, "p{0.23\\linewidth}")  -- ancho reducido
+            table.insert(col_types, "p{0.23\\linewidth}")
         elseif colname == "Special Effect / Use" then
-            table.insert(col_types, "p{0.27\\linewidth}")  -- ancho reducido
+            table.insert(col_types, "p{0.27\\linewidth}")
         else
             table.insert(col_types, "l")
         end

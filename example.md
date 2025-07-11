@@ -13,6 +13,9 @@ pandoc-latex-environment:
 
 Mistvale is an isolated, fog-shrouded village haunted by tragedy, superstition, and secrets best left undisturbed. The campaign begins as the characters arrive, drawn by rumors of disappearances, hidden riches, or simply the need for shelter. The GM should set an oppressive, uncanny atmosphere: the fog is not natural, and the villagers seem as afraid of strangers as they are of whatever lurks in the darkness.
 
+> **GM Note:**
+> The introduction should be unsettling and evocative. Emphasize the villagers' discomfort and reluctance to talk. Treat the fog as a character: omnipresent and hostile.
+
 ![](images/example-image-4.png)
 
 Mistvale is surrounded by dense woods and steep hills. The only road in is muddy and poorly maintained. The village itself consists of a handful of stone and timber buildings clustered around a central square, with a ruined abbey looming on a nearby hilltop. The fog is ever-present, muting sound and color, and making navigation difficult even for locals.
@@ -26,11 +29,6 @@ Mistvale is surrounded by dense woods and steep hills. The only road in is muddy
 
 *Fog shrouds the road, wrapping the trees and silence in a damp shroud. Hooves thud dully on wet earth. In the distance, a bell tolls, faint, signaling the end of the day. Mistvale appears before you like a shadow in the mist, its dark wooden houses and steep roofs huddled beneath the gray sky. A crow watches from a fence post, and as you cross the village threshold, the air itself seems to weigh on your shoulders. The inn, "The Smoking Lantern," offers the only warm light in the settlement. As you enter, the murmur dies and all eyes fix on you. The adventure begins, and the fog seems to close the exit behind you.*
 :::
-
-> **GM Note:**
-> The introduction should be unsettling and evocative. Emphasize the villagers' discomfort and reluctance to talk. Treat the fog as a character: omnipresent and hostile.
-
----
 
 # Chapter 1: Arrival in Mistvale
 
@@ -89,12 +87,9 @@ The atmosphere is tense and conversations are brief and evasive. Villagers avoid
 *The door creaks shut behind you. The warmth of the fire contrasts with the chill outside, but tension fills the air. Mirta greets you with a forced smile, while Jacob, seated in the corner, watches you openly. Father Silvan mutters a prayer, eyes lost in the candle flame. The murmur resumes, but conversations are barely whispers. A child approaches and offers you a cold iron amulet, saying he found it near the dry well. Night falls over Mistvale, and the fog thickens behind the steamed windows.*
 :::
 
-> **GM Note:**
-> Let the players ask questions and seek alliances. NPCs can give hints, but never the whole truth. If the characters are hostile or too nosy, they may earn the villagers' distrust.
-
 \fullpagestart
 
-## 1.3 Key NPCs
+## 1.3 Key NPCs at the Inn
 
 The following NPCs are central to the story and can provide clues, aid, or complications. Each has a distinct personality and secret that can be revealed through investigation or social interaction.
 
@@ -107,7 +102,16 @@ The following NPCs are central to the story and can provide clues, aid, or compl
 
 \fullpageend
 
----
+> **GM Note:**
+> Let the players ask questions and seek alliances. NPCs can give hints, but never the whole truth. If the characters are hostile or too nosy, they may earn the villagers' distrust.
+
+The characters can interact with these NPCs to gather information, form alliances, or create enemies. Each NPC has a unique perspective on the fog and the village's troubles, and their secrets can lead to further adventures or complications.
+
+::: squarebox
+**NPC Interaction Example**
+
+*Mirta wipes her hands on her apron and approaches you. "You look like you could use a warm meal. The stew is fresh, and I have some bread left." She glances around nervously before lowering her voice. "But be careful. The fog... it changes people. My son went out to gather herbs last week and hasn't returned. I fear the worst." Her eyes well up with tears, but she quickly composes herself. "If you find him, please bring him back."*
+:::
 
 # Chapter 2: Secrets Beneath the Fog
 
@@ -164,6 +168,7 @@ tactics: Ambush, flee if wounded
 difficulty: 10
 thresholds: 8 / 16
 hp: 4
+stress: 2
 atk: +2
 weapons:
   - Mist Claws: Close | 1d6+1 (Ethereal)
@@ -190,8 +195,6 @@ While exploring, the fog can cause strange events. Use this table to add tension
 
 > **GM Note:**
 > Use this table to break routine, build tension, or hint at the fog's magical nature.
-
----
 
 # Chapter 3: The Cursed Abbey
 
@@ -262,17 +265,17 @@ Exploring the abbey is fraught with danger. These hazards can be used to challen
 > **GM Note:**
 > Use these events to delay progress, provide clues, or increase the danger of exploration.
 
----
-
 # Chapter 4: The Fog Cult
 
-The characters discover that a secret cult is behind the events. This chapter may include chases, infiltration, and direct confrontations with cultists. Decide if the cult is large or just a handful of fanatics.
+As the investigation deepens, the party’s suspicions crystallize into a chilling certainty: a secretive cult operates at the heart of Mistvale’s misfortunes. The cult’s presence is a shadowy thread running through every tragedy, every unexplained disappearance, and every whispered warning. The villagers’ furtive glances and the strange patterns in the fog all point to a clandestine group that worships the Voice Beneath the Fog—a force they believe will grant them power, protection, or absolution.
 
-The cult is made up of villagers and outsiders who worship the Voice Beneath the Fog. They believe the fog is a blessing and perform rituals to maintain its power. The cult's leader is a charismatic but unstable figure who claims to have communed with the Voice.
+The cult is not a monolith; it is a patchwork of desperate villagers, zealous outsiders, and those seduced by the promise of forbidden knowledge. Some members are true believers, convinced that the fog is a blessing and the Voice a misunderstood guardian. Others are drawn by fear, blackmail, or the hope of saving a loved one. The cult’s leader, known only as the Master of the Fog, is a figure of both awe and terror—his charisma binds the group, but his instability threatens to unravel it all.
 
 ![](images/example-image-2.png)
 
-The cultists are fanatical and will do anything to protect their secrets. They wear dark robes and masks, and their rituals involve chanting, sacrifices, and the use of cold iron to ward off spirits. The fog is both a tool and a shield for them.
+Cultists are rarely seen in daylight. At night, however, they move with purpose, slipping through the mist in hooded robes and eerie masks. Their rituals are a blend of ancient superstition and dark innovation: chanting in forgotten tongues, drawing sigils with ash and blood, and wielding cold iron as both a ward and a weapon. The fog itself seems to obey their will, thickening to hide their movements or swallowing up the screams of their victims.
+
+The cult’s hierarchy is loose but effective. The Master commands absolute loyalty, his word law within the circle. Beneath him are trusted lieutenants—each with their own secrets and ambitions. The rank and file are a mixture of the devout and the desperate, each marked by a distinctive trait or ritual scar.
 
 | Cultist         | Distinctive Trait | Weapon          |
 |-----------------|-------------------|-----------------|
@@ -281,68 +284,88 @@ The cultists are fanatical and will do anything to protect their secrets. They w
 | Blind Crone     | Smells of incense | Sharp nails     |
 | Mute Twins      | Blank stare       | Ropes           |
 
+The cult’s influence permeates Mistvale. Some villagers aid them out of fear; others turn a blind eye, hoping to avoid notice. The fog is both their shield and their prison, for while it grants them power, it also isolates them from the world beyond.
+
 ## 4.1 Discovery
 
-The cult performs rituals in the woods, using the fog as cover. The characters may find a circle of cultists mid-ritual, with a victim prepared for sacrifice. Interrupting the ritual may save a life, but also draw the cult's wrath.
+Uncovering the cult’s activities is a pivotal moment in the campaign. The party might stumble upon a ritual by following strange lights into the woods, overhearing coded conversations in the inn, or tracking a missing villager to a secluded glade. However they arrive, the scene is always the same: a circle of masked figures, the air thick with incense and fear, and a victim—bound, gagged, and awaiting a grim fate.
 
-The ritual site is marked by symbols in the earth and the stench of burning herbs. Cultists chant in a language none of the villagers speak. The victim may be a missing villager or an outsider.
+The ritual site is a study in contrasts: the natural beauty of the forest marred by scorched earth, twisted symbols, and the acrid stench of burning herbs. The chanting is guttural, rhythmic, and utterly alien—words that seem to claw at the edges of understanding. The fog is so dense that even torchlight struggles to penetrate it, and every shadow seems to move with a will of its own.
 
-- The cult uses the fog to hide their movements and confuse pursuers.
-- If the ritual is interrupted, the cultists may fight, flee, or attempt to complete the ritual at any cost.
-- Saving the victim may provide valuable information about the cult's plans.
+::: roundedbox
+**OPTIONAL RULE: Safe Haven**
 
-::: squarebox
-**Ritual in the Woods**
-
-*In a forest clearing, the fog is so thick you can barely see a meter ahead. Voices chant in a forgotten tongue, and a hooded figure raises a knife above an improvised altar. Cultists sway around the circle, moving to the rhythm of guttural chants. The victim, bound and gagged, struggles to break free. The air vibrates with dark energy, and for a moment, you feel something ancient watching from the fog.*
+When characters find shelter in a well-guarded or consecrated location, such as the inn or a protected home, they may attempt to rest and recover. During a short rest, each character can regain a small amount of Will or heal minor wounds. However, if the party chooses to spend the night, the GM may introduce unsettling dreams, cryptic visions, or lingering unease as a reminder that true safety is rare in Mistvale. Only in places truly protected from the supernatural can the party rest without risk of nightmares or mysterious disturbances.
 :::
 
-#### Cultist Tactics
+If the party intervenes, chaos erupts. Cultists scatter into the mist, some fighting with wild abandon, others fleeing with inhuman speed. The victim’s fate hangs in the balance—saving them may earn the party a grateful ally, but it also paints a target on their backs.
 
-The cultists are cunning and desperate, using every advantage the fog and their knowledge of the woods provide:
+- **The cult uses the fog as both weapon and escape route:** Pursuing them is perilous, as the mists twist paths and conceal traps.
+- **Rituals are always guarded:** Even a lone cultist may have a hidden bell or whistle to summon reinforcements.
+- **The victim may hold crucial information:** Perhaps they overheard plans, glimpsed the cult’s true leader, or possess a token the cult desperately wants returned.
+- **Evidence abounds:** Scraps of parchment, ritual implements, and the lingering aura of dark magic can all be found by those who search carefully.
 
-- **Use the fog to obscure movement and escape:** Cultists will dart in and out of the mist, making it hard to follow or target them.
-- **Attempt to complete the ritual at any cost:** Their primary goal is to finish the sacrifice, even if it means sacrificing themselves.
-- **Summon shadows or spirits to fight for them:** Some cultists have minor magical abilities and can call forth lesser spirits.
-- **Target the most isolated or vulnerable character:** They will try to separate party members and pick them off one by one.
-- **Bargain for their lives if cornered:** If defeat seems inevitable, a cultist may offer information or claim to be under duress.
+> **GM Note:**
+> Build tension with sound and sensation: the snap of a twig, the sudden hush as chanting stops, the cold brush of fog against skin. Let the players feel the cult’s paranoia and fanaticism—these are people who believe they are on the brink of something world-changing, and will fight or flee with equal fervor.
+
+### Cultist Tactics
+
+Cultists are more than mere thugs; they are cunning, desperate, and intimately familiar with the terrain. Their tactics are shaped by the fog and their knowledge of the woods:
+
+- **Obscured Movement:** Cultists dart in and out of the mist, using it to break line of sight and launch ambushes.
+- **Ritual Completion at All Costs:** Even when threatened, their priority is the ritual. Some may sacrifice themselves to buy time.
+- **Summoning Aid:** A few cultists can call upon minor spirits or animate shadows to harass the party.
+- **Divide and Conquer:** They target isolated or distracted characters, seeking to overwhelm one foe at a time.
+- **Negotiation and Deceit:** When cornered, a cultist might plead for mercy, offer information (true or false), or try to sow discord among the party.
+
+> **GM Note:**
+> Let cultists use the environment—roots, low branches, sudden drops in the terrain—to their advantage. If the party is too cautious, the cult may slip away entirely, leaving only cryptic warnings and a growing sense of dread.
 
 ## 4.2 Adversary: Cult Leader
 
 ::: adversary
 name: Master of the Fog
 type: Tier 2 Solo
-description: A fanatical sorcerer, swathed in bandages and mist.
-tactics: Control the fog, attack from afar
+description: A fanatical sorcerer, swathed in bandages and mist. His eyes burn with unnatural light, and his voice carries the weight of prophecy and madness.
+tactics: Control the fog, attack from afar, manipulate cultists and spirits
 difficulty: 14
 thresholds: 12 / 24
 hp: 10
+stress: 5
 atk: +3
 weapons:
   - Fog Ray: Ranged | 2d6 (Magical)
 features:
   - Protective Mist: Ranged attacks against him have disadvantage.
   - Summon Specters: Can summon 1d4 Mist Shadows.
+  - Voice of Command: Once per encounter, can force a cultist or weak-willed NPC to act immediately.
 :::
 
-The Master is a formidable foe and will use the fog to shield himself and escape if needed. If defeated, the cultists scatter, but the main threat remains.
+The Master of the Fog is both the cult’s heart and its greatest liability. He is charismatic, but his grip on reality is tenuous. In battle, he uses the fog to obscure himself, striking from a distance and summoning spirits to do his bidding. If pressed, he will not hesitate to sacrifice his followers or himself to complete the ritual.
+
+If defeated, the cult’s structure collapses. Some members flee into the night, others surrender, and a few may beg the party for protection or forgiveness. But the Master’s defeat does not end the threat—the fog’s source remains, and the true confrontation still lies ahead.
 
 > **GM Note:**
-> The fight can be deadly if the players don't cooperate. If the victim is saved, they may become an ally or a source of information.
+> Make the Master’s presence unsettling. His words should hint at knowledge beyond mortal ken, and his powers should warp the very air around him. The fight should feel desperate and strange, with the fog itself seeming to resist the party’s every move. If the players save the victim, reward them not just with gratitude, but with a vital clue or an unexpected ally.
 
----
 
 # Chapter 5: Revelations
 
-This chapter ties all clues together and prepares for the climax. The characters may discover the full story of the curse and decide how to confront the Voice Beneath the Fog.
+The air in Mistvale grows heavier as night falls, a sense of anticipation settling over the village. The clues the characters have gathered—cryptic warnings, missing villagers, the oppressive presence of the fog—begin to form a pattern. Whispers in the dark, half-remembered rituals, and the haunted eyes of Father Silvan all point to a single, chilling truth: the curse that suffocates Mistvale is not a random misfortune, but the result of a desperate, unfinished act from the village’s past.
 
-The diary, found in the abbey or with Father Silvan, reveals the curse's origin: an ancient ritual to seal the Voice Beneath the Fog, requiring the sacrifice of an innocent. The diary also mentions the cold iron amulet and a hidden passage under the bell tower.
+This chapter is the turning point of the campaign. Here, the party pieces together the fragmented history of the abbey, the cult, and the supernatural force known as the Voice Beneath the Fog. The sense of mystery gives way to the realization that the fate of Mistvale—and perhaps their own souls—depends on the choices they make in the coming hours.
+
+The discovery of the diary is a moment of revelation and dread. Its pages, fragile and stained, hold the confessions and regrets of those who tried to contain the darkness, and failed. As the party reads, the boundaries between past and present blur; the echoes of old prayers and desperate bargains seem to fill the silence around them.
 
 ![](images/example-image-1.png)
 
 ## 5.1 The Lost Diary
 
-The diary is written in a shaky hand, with pages torn and stained. It describes the events leading up to the abbey fire, the failed ritual, and the growing power of the fog. The final entries are desperate pleas for forgiveness and warnings to future generations.
+The diary is a battered, leather-bound volume, its cover warped by heat and water. Inside, the ink runs in places, but enough remains legible to piece together a harrowing account. The entries begin with hope: descriptions of the abbey’s construction, the arrival of the first relics, and the pride of a community united in faith. But as the pages turn, the tone shifts—first to anxiety as the fog creeps in, then to horror as disappearances begin and prayers go unanswered.
+
+The writer describes the growing influence of a secretive cult, their rituals held in the dead of night, and the gradual corruption of the abbey’s leaders. There are mentions of strange lights in the woods, voices heard beneath the floor, and the sense that the fog itself is alive, hungry for something only the villagers can provide.
+
+The final entries are almost illegible, written in a trembling hand. They speak of a failed ritual, a fire set to hide the evidence, and the burden of guilt that cannot be washed away. The last page is a plea to anyone who finds the diary: to finish what was started, to succeed where the writer failed, and to beware the Voice that waits in the mist.
 
 ::: squarebox
 **Diary Reading**
@@ -350,24 +373,32 @@ The diary is written in a shaky hand, with pages torn and stained. It describes 
 *"Today we sealed the crypt. But the fog does not lift. Something watches us from the other side... Father Silvan says we must pray, but I know only the sacrifice of an innocent can maintain the seal. I hid the amulet in the bell tower, hoping none would find it. If you read this, beware: the Voice Beneath the Fog does not forget, and the fog is its breath."*
 :::
 
-- The cold iron amulet repels shadows.
-- The cult seeks to release "the Voice Beneath the Fog."
-- The altar must be purified with innocent blood.
-- There is a hidden passage under the bell tower.
+The revelations within the diary are both a guide and a warning. The cold iron amulet, mentioned repeatedly, is described as a ward against the shadows that serve the Voice. The writer’s fear is palpable—every page seems to tremble with the weight of secrets too terrible to bear.
+
+As the party digests these revelations, the atmosphere in Mistvale shifts. The fog presses closer to the windows, and the distant sound of chanting can sometimes be heard on the wind. The villagers seem more withdrawn, their eyes haunted by memories they refuse to share. The sense of urgency grows: the next new moon is approaching, and with it, the final chance to break the curse or be consumed by it.
+
+- The cold iron amulet is a key defense, its presence unsettling to the cultists and their supernatural allies.
+- The cult’s ultimate goal is revealed: to unleash the Voice Beneath the Fog, believing it will grant them power or absolution.
+- The purification of the altar is not a simple act, but a dangerous ritual that demands sacrifice and courage.
+- The hidden passage under the bell tower offers a secret route to the crypt, but is likely trapped or guarded by restless spirits.
 
 #### Clues from the Diary
 
-The diary provides several vital insights, each of which can drive the party’s next decisions:
+The diary’s scattered notes and desperate warnings offer the following insights:
 
-- **The original ritual was incomplete:** The seal on the crypt is weak, and the Voice is growing stronger.
-- **The abbey fire was not an accident:** The cult set the fire to cover up their failed ritual.
-- **The priest may know more than he admits:** Father Silvan’s guilt and fear are clues to his involvement.
-- **The amulet's power is strongest at midnight:** Timing may be crucial for the final confrontation.
+- **The original ritual was incomplete:** The seal on the crypt is weak, and the Voice is growing stronger with each passing night. The ritual must be finished, or the fog will spread beyond Mistvale.
+- **The abbey fire was not an accident:** The cult set the blaze to erase evidence of their failure, sacrificing innocents in the process. The spirits of the dead may linger, seeking justice or revenge.
+- **Father Silvan’s guilt:** The priest’s evasiveness and fear are signs of his involvement. He may hold the final piece of the puzzle, or be a pawn of darker forces.
+- **The amulet’s power peaks at midnight:** Timing the final confrontation is crucial. The party must decide whether to trust the diary’s instructions, risk improvisation, or seek another way.
 
 > **GM Note:**
-> The diary can be found in the sacristy or with Father Silvan. It connects clues and motivates the final confrontation.
+> Let the diary serve as both a roadmap and a source of dread. Read passages aloud, letting the players feel the weight of history pressing down on them. Encourage them to connect the dots between the diary, the villagers’ stories, and the physical clues they’ve uncovered. This is the moment when the campaign’s mysteries crystallize into a clear, terrifying challenge.
+
+The discovery of the diary should prompt discussion and debate among the players. Do they trust its account? Will they risk the dangers of the crypt, or try to find another way to break the curse? The choices they make now will shape the climax of the story.
 
 ## 5.2 Random Night Encounters Table
+
+As the party prepares for the final confrontation, the nights in Mistvale grow increasingly perilous. The fog thickens, strange sounds echo through the village, and the boundary between the living and the dead becomes ever more fragile. Use the following table to heighten tension and keep the players on edge during their rest or nighttime investigations.
 
 | d6 | Night Encounter in Mistvale                      |
 |----|--------------------------------------------------|
@@ -379,31 +410,28 @@ The diary provides several vital insights, each of which can drive the party’s
 | 6  | A character dreams of the Voice Beneath the Fog. |
 
 > **GM Note:**
-> Use these encounters to keep up tension and danger, even during rest.
-
----
+> Use these encounters to reinforce the sense that nowhere in Mistvale is truly safe. Even rest brings no comfort, and every night is a reminder that the fog is watching, waiting for the party to falter. Let these events foreshadow the dangers ahead and keep the players invested in the unfolding mystery.
 
 # Chapter 6: The Final Ritual
 
-This is the campaign's climax. The characters must decide how to face the Voice Beneath the Fog: purify the altar, destroy it, use the amulet, or find another solution. Their choices will have consequences for the village and themselves.
+The moment of truth has arrived. All the clues, sacrifices, and desperate gambits have led the party to the crypt beneath the ruined abbey—a place where the air itself seems to pulse with ancient dread. The descent is a journey into the heart of Mistvale’s darkness: stone steps slick with condensation, walls etched with forgotten prayers, and the oppressive weight of centuries pressing down from above. Every sound is amplified, every shadow seems to move, and the sense of being watched is inescapable.
 
-The crypt is deep beneath the abbey, accessible only through a hidden passage. The air is thick with the stench of mold and rot. The altar is covered in dried blood and strange runes that pulse with a sickly light.
+The crypt is more than a tomb; it is the stage for the village’s last hope and greatest terror. The altar at its center is a grotesque monument, stained with the evidence of past rituals and ringed by flickering runes that pulse in time with the party’s heartbeats. The fog here is thicker, almost tangible, coiling around ankles and whispering in voices half-remembered from childhood nightmares.
+
+This is not just a battle of swords and spells, but of wills and souls. The party must decide not only how to confront the Voice Beneath the Fog, but what they are willing to sacrifice for Mistvale’s salvation. The choices made here—whether to purify the altar, destroy it, use the amulet, or attempt some other desperate stratagem—will shape the fate of every soul in the village.
 
 ## 6.1 Preparations
 
-Players can seek allies, set traps, or investigate the altar before the final confrontation. Using the amulet or performing a sacrifice may weaken or seal the Voice for good, but at a high price.
+The hours or moments before the ritual are fraught with tension. Every character feels the weight of expectation and fear. Some may seek out surviving villagers for last-minute aid: a blessing from the priest, a healing poultice from the herbalist, or simply a word of encouragement from a child whose hope has not yet been extinguished. Others may turn inward, steeling themselves for the ordeal to come or wrestling with doubts about what is truly right.
 
-#### Possible Preparations
+Setting magical wards or traps becomes a frantic, whispered affair—chalk symbols scrawled on flagstones, candles lit with trembling hands, and salt poured in careful circles. The crypt’s oppressive atmosphere makes every action feel urgent, every sound a potential omen. Researching the original ritual might yield a crucial insight or a forgotten ingredient, while creating distractions above could buy precious seconds when the cult inevitably tries to intervene.
 
-Before facing the final threat, the party can:
-
-- **Enlist the help of surviving villagers or the rescued cult victim:** Allies can provide support, healing, or even magical aid.
-- **Set up magical wards or traps in the crypt:** These can hinder the Voice or its minions, giving the heroes an edge.
-- **Research the original ritual for clues:** Old texts or the diary may reveal a weakness or required component for victory.
-- **Create distractions to split the cult's forces:** Drawing cultists away from the crypt can make the final battle easier.
-- **Decide who will wield the amulet or make the ultimate sacrifice:** The amulet’s power is great, but it may come at a terrible cost to its bearer.
+Perhaps most difficult is the decision of who will wield the amulet or make the ultimate sacrifice. The amulet’s cold weight is a reminder that power always comes with a price, and the knowledge that the ritual may demand more than anyone is willing to give hangs heavy in the air.
 
 ![](images/example-image-6.png)
+
+> **GM Note:**
+> Let the players feel the gravity of their choices. Encourage them to discuss plans, voice fears, and say goodbyes if needed. This is the time for last confessions, unexpected alliances, and the kind of dramatic moments that will be remembered long after the dice are put away.
 
 ::: squarebox
 **Crypt Climax**
@@ -413,50 +441,41 @@ Before facing the final threat, the party can:
 
 ## 6.2 Final Adversary
 
-::: adversary
-name: The Voice Beneath the Fog
-type: Tier 3 Solo
-description: An ancient entity, made of shadows and whispers.
-tactics: Manipulate minds, absorb light
-difficulty: 18
-thresholds: 20 / 40
-hp: 16
-atk: +5
-weapons:
-  - Touch of Despair: Close | 3d6+2 (Magical)
-  - Silent Scream: Area | 2d8 (Psychic)
-experience: Forbidden Wisdom +5
-features:
-  - Ethereum: Immune to non-magical weapons.
-  - Regeneration: Each time it deals damage, it heals 2 HP.
-  - Possesion: Can possess a character for 1 turn (hard save).
-:::
+The confrontation with the Voice Beneath the Fog is more than a test of strength; it is a struggle of hope against despair, light against the encroaching dark. The entity’s presence warps reality: torches flicker with unnatural colors, the ground trembles with each syllable of its whispered threats, and the air is filled with the scent of decay and old secrets.
 
-The fight should be epic and terrifying. If the characters fail, the Voice may escape and spread the fog elsewhere. If they succeed, they may free the village, but not without paying a price.
+As the battle rages, the Voice may try to tempt the characters with visions of lost loved ones, promises of power, or threats against the innocent. The fog thickens, sometimes obscuring friend from foe, and the runes on the altar flare with every blow struck. The entity’s attacks are not just physical or magical, but psychological—each failed defense saps the party’s will, each injury threatens to unravel their resolve.
+
+Victory is possible, but it will not come without cost. The altar may shatter, releasing a final pulse of energy; the amulet may crack, its power spent; and the crypt itself may begin to collapse as the ancient magic sustaining it unravels.
+
+If the party fails, the Voice may escape, its influence spreading beyond Mistvale. If they succeed, the fog will thin, but the scars—both physical and emotional—will linger.
 
 > **GM Note:**
-> Adjust the difficulty based on the group's resources and choices. Reward cleverness with advantages in the final fight.
+> Make this battle feel truly climactic. Use sensory details, shifting terrain, and the Voice’s ability to manipulate minds and emotions. Allow for moments of heroism, sacrifice, and even despair. The outcome should feel earned, and the consequences—good or bad—should resonate through the remainder of the story.
 
 ---
 
 # Chapter 7: The Echo of the Fog
 
-This chapter serves as the denouement and shows the consequences of the characters' actions. The village may be saved, cursed, or left with strange aftereffects. Use this chapter to open new plots or close the story.
+In the aftermath of the final confrontation, Mistvale is transformed. The fog may lift, revealing a village battered but free at last, or it may linger, a reminder that some evils cannot be wholly banished. The villagers emerge from their homes, faces etched with awe and uncertainty, and the silence is broken by tentative laughter, quiet weeping, or the song of a bird not heard in years.
 
-After the final confrontation, Mistvale may be freed from the fog or forever marked. The villagers react according to the outcome, and new mysteries may arise.
+The party’s actions ripple outward: those who survived the ordeal are changed, marked by what they have seen and done. Some may be hailed as heroes, others regarded with suspicion or fear, especially if the cost of victory was high. Old wounds may begin to heal, or new divisions may form as the truth of the cult and the curse comes to light.
+
+This chapter is a time for reflection, for tying up loose ends, and for setting the stage for future adventures. The characters may choose to stay and help rebuild, to move on in search of new mysteries, or to confront the lingering effects of the fog—strange powers, haunted dreams, or the whispers of the Voice that echo in the quiet moments before dawn.
 
 **Possible endings:**
 
-- The fog lifts, and Mistvale begins to heal.
-- The fog remains, but the cult is gone—at least for now.
-- The Voice is banished, but at the cost of a character's life or soul.
-- The curse is broken, but a new threat emerges from the darkness.
+- The fog lifts, and Mistvale begins to heal. Flowers bloom where once only weeds grew, and the villagers slowly reclaim their lives.
+- The fog remains, but the cult is gone—at least for now. The village is wary, but hope flickers in the darkness.
+- The Voice is banished, but at the cost of a character's life or soul. A memorial is built, and stories are told of the heroes who faced the darkness.
+- The curse is broken, but a new threat emerges from the darkness. Strange omens appear, and rumors of trouble in neighboring lands begin to spread.
 
 ::: squarebox
 **Epilogue Narration**
 
 *The fog begins to lift, revealing the first rays of sun over Mistvale. Villagers emerge from their homes, stunned, and look at you with both respect and fear. The crow takes flight, vanishing into the horizon. You know you have changed the village's fate, but also that darkness always lurks in the world's forgotten corners. As you leave, a last glance back reveals that the fog never truly disappears.*
 :::
+
+The party’s legacy is uncertain, but their deeds will be remembered—whether as saviors, martyrs, or harbingers of further change. The world beyond Mistvale awaits, full of new challenges and old shadows.
 
 ## 7.2 Random Aftermath Table
 
@@ -469,10 +488,9 @@ After the final confrontation, Mistvale may be freed from the fog or forever mar
 
 ![](images/example-image-5.png)
 
-> **GM Note:**
-> Use these aftermaths to connect with future adventures or leave a sense of unease.
+> ***GM Note:***
+> Let the consequences of the party’s choices shape the future of Mistvale. Whether the village finds peace or faces new dangers, the echoes of their actions will linger, inspiring new legends and adventures.
 
----
 
 # Appendices
 

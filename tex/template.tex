@@ -24,26 +24,26 @@
 \setlength{\columnsep}{1.5em}
 \newcommand{\pandocbounded}[1]{#1}
 
+% --- Shaded environment ---
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{shaded}}{\end{shaded}}
+
 % --- Fonts ---
 \renewcommand{\normalsize}{\fontsize{8.5}{10}\selectfont}
 \normalsize
 \renewcommand{\baselinestretch}{1.2}
-
 \setmainfont{Montserrat-Regular.ttf}[
     Path = ./fonts/,
     ItalicFont = Merriweather-Italic.ttf,
     BoldFont = Montserrat-SemiBold.ttf,
     BoldItalicFont = Merriweather-BoldItalic.ttf
 ]
-
 \newfontfamily\montserratThin{Montserrat-Thin.ttf}[
     Path = ./fonts/,
 ]
-
 \newfontfamily\montserratLight{Montserrat-Light.ttf}[
     Path = ./fonts/,
 ]
-
 % Try to load Eveleth-Regular.ttf, if fails load League-Spartan.ttf
 \IfFontExistsTF{./fonts/Eveleth-Regular.ttf}{
     \newfontfamily\eveleth{Eveleth-Regular.ttf}[Path=./fonts/]
@@ -52,7 +52,7 @@
 }
 
 % --- Colors ---
-\definecolor{maintext}{HTML}{444444}
+\definecolor{maintext}{HTML}{000000}
 \definecolor{h1text}{HTML}{444444}
 \definecolor{h2text}{HTML}{3a6b7b}
 \definecolor{h3text}{HTML}{927421}
@@ -106,8 +106,8 @@
 \newtcolorbox{roundedbox}{
     colback=gray!7,
     enhanced,
-    frame hidden,         % Alternativamente, puedes usar boxrule=0pt
-    arc=6pt,              % Controla el radio de las esquinas redondeadas
+    frame hidden,
+    arc=6pt,
     left=.75em,
     right=.75em,
     top=.75em,
@@ -180,10 +180,6 @@
 }
 \setlength{\leftmargini}{1em}
 \setlength{\leftmarginii}{1em}
-
-% --- Shaded environment ---
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{shaded}}{\end{shaded}}
 
 % --- Frontpage ---
 \newcommand{\frontpage}[3]{%

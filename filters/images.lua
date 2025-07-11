@@ -1,3 +1,4 @@
+-- Images filter to avoid multicolumn errors.
 function Image(el)
     el.caption = {}
     el.attributes["width"] = "1.0\\linewidth"

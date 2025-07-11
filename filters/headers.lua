@@ -1,4 +1,4 @@
--- H4 headers filter.
+-- H4 custom headers filter.
 function Header(elem)
     if elem.level == 4 then
         local content = pandoc.utils.stringify(elem.content)

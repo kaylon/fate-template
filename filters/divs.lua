@@ -1,3 +1,5 @@
+-- Divs filter to generate adversaries and environment boxes.
+
 -- Function to clean text for LaTeX
 local function clean_latex(s)
     if not s then return "" end
@@ -16,7 +18,6 @@ local function para_to_yaml(para)
         elseif inline.t == "Str" then
             table.insert(parts, inline.text)
         end
-        -- Add more inline types if needed (e.g., Emph, Strong, etc.)
     end
     return table.concat(parts)
 end
@@ -77,7 +78,6 @@ function Div(elem)
             if block.t == "Para" then
                 yaml_text = yaml_text .. para_to_yaml(block) .. "\n"
             elseif block.t == "Plain" then
-                -- If you have Plain blocks, handle them similarly
                 yaml_text = yaml_text .. para_to_yaml({content = block.content}) .. "\n"
             end
         end
