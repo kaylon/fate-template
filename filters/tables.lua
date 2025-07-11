@@ -1,4 +1,3 @@
--- Tables filter to avoid multicolumn errors.
 function Table(elem)
     local simple = pandoc.utils.to_simple_table(elem)
     local header = simple.header
@@ -14,14 +13,16 @@ function Table(elem)
         elseif colname == "Special Effect / Use" then
             table.insert(col_types, "p{0.27\\linewidth}")
         else
-            table.insert(col_types, "l")
+            table.insert(col_types, "L")
         end
     end
     local tabular_cols = table.concat(col_types, "")
 
     local latex = "\\vspace{1em}\n"
     latex = latex .. "{\\scriptsize\n"
-    latex = latex .. "\\noindent\\begin{tabular}{" .. tabular_cols .. "}\n"
+    latex = latex .. "\\begin{center}\n"
+    latex = latex .. "\\renewcommand{\\arraystretch}{1.25}\n"
+    latex = latex .. "\\begin{tabulary}{\\linewidth}{" .. tabular_cols .. "}\n"
     if #header > 0 then
         latex = latex .. "\\rowcolor{tableheaderbg}"
         for i, h in ipairs(header) do
@@ -39,8 +40,10 @@ function Table(elem)
             if i < cols then latex = latex .. " & " else latex = latex .. " \\\\\n" end
         end
     end
-    latex = latex .. "\\end{tabular}\n"
+    latex = latex .. "\\end{tabulary}\n"
+    latex = latex .. "\\end{center}\n"
     latex = latex .. "}\n"
     latex = latex .. "\\vspace{1em}\n"
+
     return pandoc.RawBlock('latex', latex)
 end

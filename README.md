@@ -2,6 +2,8 @@
 
 This project provides a modern workflow to create beautiful, two-column PDF documents for tabletop RPG campaigns (like Daggerheart) using Markdown. It uses a custom LaTeX template, Pandoc Lua filters, and an organized folder structure to make the process easy—even for users with no LaTeX experience.
 
+See the [example module](output/example.pdf)!
+
 ## Features
 - Write your campaign in Markdown: Easy, readable, and portable.
 - Automatic conversion to PDF: Produces a professionally styled, two-column PDF.
@@ -199,7 +201,7 @@ pandoc main.md --no-highlight --template=tex/template.tex --pdf-engine=xelatex -
 - Adversaries and custom blocks: Use the provided YAML/Markdown syntax for easy entry and automatic styling.
 - Troubleshooting: If you get errors, ensure Pandoc and LaTeX are correctly installed and that your image paths are correct.
 - Sometimes special characters in tables (like `#`, `&`, etc.) can cause issues. If you encounter problems, try escaping them with double backslash (`\\#`).
-- Use the example.md file as a reference for formatting and structure. This file is an AI generated module, so it is not accurate or complete, but it serves as a good example.
+- Use the `example.md` file as a reference for formatting and structure, you can the generated output in [output/example.pdf](output/example.pdf). This file is an AI generated module, so it is not accurate or complete, but it serves as a good example.
 - If you need to customize the colours or styles, you can modify the `template.tex` file in the `tex/` directory. Look for the `% --- Colors ---` block to change colors, or adjust any settings as needed.
 
 ## License
