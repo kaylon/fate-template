@@ -1,5 +1,5 @@
 -- Main filters file.
-require("filters/headers")
-require("filters/divs")
-require("filters/tables")
-require("filters/images")
+require("fate-template/filters/headers")
+require("fate-template/filters/divs")
+require("fate-template/filters/tables")
+require("fate-template/filters/images")

@@ -33,22 +33,22 @@
 \normalsize
 \renewcommand{\baselinestretch}{1.2}
 \setmainfont{Montserrat-Regular.ttf}[
-    Path = ./fonts/,
+    Path = ./fate-template/fonts/,
     ItalicFont = Merriweather-Italic.ttf,
     BoldFont = Montserrat-SemiBold.ttf,
     BoldItalicFont = Merriweather-BoldItalic.ttf
 ]
 \newfontfamily\montserratThin{Montserrat-Thin.ttf}[
-    Path = ./fonts/,
+    Path = ./fate-template/fonts/,
 ]
 \newfontfamily\montserratLight{Montserrat-Light.ttf}[
-    Path = ./fonts/,
+    Path = ./fate-template/fonts/,
 ]
 % Try to load Eveleth-Regular.ttf, if fails load League-Spartan.ttf
-\IfFontExistsTF{./fonts/Eveleth-Regular.ttf}{
-    \newfontfamily\eveleth{Eveleth-Regular.ttf}[Path=./fonts/]
+\IfFontExistsTF{./fate-template/fonts/Eveleth-Regular.ttf}{
+    \newfontfamily\eveleth{Eveleth-Regular.ttf}[Path=./fate-template/fonts/]
 }{
-    \newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fonts/]
+    \newfontfamily\eveleth{LeagueSpartan-Extrabold.ttf}[Path=./fate-template/fonts/]
 }
 
 % --- Colors ---
@@ -196,10 +196,10 @@
 }
 
 % --- Adversaries ---
-\input{tex/adversary}
+\input{fate-template/tex/adversary}
 
 % --- Environments ---
-\input{tex/environment}
+\input{fate-template/tex/environment}
 
 % --- Table of contents ---
 \makeatletter
