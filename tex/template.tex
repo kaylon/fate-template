@@ -72,6 +72,46 @@
 
 \color{maintext}
 
+% --- Background images ---
+\usepackage{background}
+
+% Set background for all pages except the first
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=1,
+    contents={}
+}
+
+% Front page background
+\newcommand{\setfrontbackground}{
+    \backgroundsetup{
+        contents={\includegraphics[width=\paperwidth,height=\paperheight]{fate-template/images/background-front.png}}
+    }
+}
+
+% Other pages background
+\newcommand{\setotherbackground}{
+    \backgroundsetup{
+        contents={\includegraphics[width=\paperwidth,height=\paperheight]{fate-template/images/background-other.png}}
+    }
+}
+
+% Automatically switch backgrounds
+\AtBeginDocument{
+    \setfrontbackground
+    \AddToHook{shipout/after}{%
+        \ifnum\value{page}=1
+            \setfrontbackground
+        \else
+            \setotherbackground
+        \fi
+    }
+}
+
+
+
+
 % --- Columns ---
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5em}

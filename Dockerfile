@@ -23,7 +23,8 @@ RUN tlmgr install tcolorbox \
      hyperref \
      needspace \
      textcase \
-     tabulary
+     tabulary \
+     eso-pic
 
 # Ensure pipx binaries are in PATH
 ENV PATH="/root/.local/bin:${PATH}"
