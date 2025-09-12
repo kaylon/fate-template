@@ -1,0 +1,42 @@
+name: Pandoc
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+
+
+jobs:
+
+  convert_via_pandoc:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Checkout repository and submodules
+        # Checkout the repository on the host runner before entering the container
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Build custom Pandoc Docker image
+        run: |
+          docker build -t custom-pandoc -f fate-template/Dockerfile fate-template
+
+      - name: Run Pandoc using custom Docker image
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/data" custom-pandoc \
+            -f markdown -t pdf -o /data/output/main.pdf --toc /data/main.md \            
+            --no-highlight \
+            --template="/data/fate-template/tex/template.tex" \
+            --pdf-engine=xelatex \
+            --filter pandoc-latex-environment \
+            --lua-filter="/data/fate-template/filters/filters.lua"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: "Main"
+          path: "main.pdf"
+      

@@ -58,6 +58,10 @@ See the [example module](output/example.pdf)!
    ```
 4. Clone this repository or download the files to your local machine.
 
+## Alternative pdf creation via github actions
+
+If you don't want to install the pandoc stack you can use github actions to create your pdf. On pushing to the main branch the pdf will be generated. You can retrieve it from the actions tab in github under the pandoc job artifacts.
+
 ## Writing Your Campaign
 
 Write your content in `main.md` using standard Markdown.
